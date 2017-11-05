@@ -1,0 +1,135 @@
+\documentclass[12pt, xcolor={dvipsnames}]{beamer}
+
+%\definecolor{colour name}{rgb}{?,?,?}
+
+\usetheme{metropolis}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\author{Joel Berkeley}
+\title{Python}
+%\logo{} 
+\institute{Verimatrix Bristol} 
+\date{October 2017} 
+%\subject{} 
+
+\setbeamercolor*{structure}{
+  bg=OliveGreen!20,
+  fg=OliveGreen
+}
+\setbeamercolor*{palette primary}{
+  use=structure,
+  fg=OliveGreen,
+  bg=structure.fg
+}
+\setbeamercolor{section in toc}{
+  fg=black,
+  bg=white
+}
+\setbeamercolor{alerted text}{
+  use=structure,
+  fg=structure.fg!50!black!80!black
+}
+\setbeamercolor{titlelike}{
+  parent=palette primary,
+  fg=structure.fg!50!black
+}
+\setbeamercolor{frametitle}{
+  bg=gray!10!white,
+  fg=black
+}
+\setbeamercolor*{titlelike}{
+  parent=palette primary
+}
+
+\lstset{
+	language=Scala,
+	keywordstyle=\color{OliveGreen}\textbf,
+	stringstyle=\color{OliveGreen},
+  commentstyle=\color{gray}
+}
+
+\begin{document}
+
+\begin{frame}
+  \maketitle
+\end{frame}
+
+\begin{frame}
+  \frametitle{Overview}
+
+  \begin{itemize}
+    \item hi
+    \item there
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Properties}
+  \begin{onlyenv}<1>
+    \lstinputlisting[language=Python]{python/needs_property.py}
+  \end{onlyenv}
+  \begin{onlyenv}<2>
+    \lstinputlisting[language=Python]{python/property.py}
+  \end{onlyenv}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Setters, getters}
+  \lstinputlisting[language=Python, showstringspaces=false]{python/setter.py}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Special methods}
+  \lstinputlisting[language=Python, showstringspaces=false]{python/special_methods.py}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{Inheritance 1}
+\lstinputlisting[language=Python]{python/inheritance.py}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Inheritance 2}
+\lstinputlisting[language=Python]{python/inheritance_super.py}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Comprehensions}
+  
+  \begin{itemize}
+    \item<1-> List \lstinputlisting[language=Python]{python/list_comprehension.py}
+    \item<2-> Set \lstinputlisting[language=Python]{python/set_comprehension.py}
+    \item<3-> Generator \lstinputlisting[language=Python]{python/generator_comprehension.py}
+    \item<4-> Dictionary \lstinputlisting[language=Python]{python/dictionary_comprehension.py}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Comprehensions overview}
+  \begin{itemize}
+    \item Based on mathematical set notation:
+      \begin{equation}
+  	    \{x \in \mathbb Z^+ \mid x < 8\}
+      \end{equation}
+    \item Recommended over map, filter, reduce (deprecated)
+    \item can iterate over arbitrary numbers of iterables
+      \begin{lstlisting}
+[f(x1,...,xN) for x1 in iter1 if g1(x1)
+              for x2 in iter2 if g2(x2)
+              ...
+              for xN in iterN if g2(xN)]
+      \end{lstlisting}
+      e.g.
+      \begin{lstlisting}
+[(x, y) for x in [0, 1] for y in [0, 1]]
+# returns [(0, 0), (0, 1), (1, 0), (1, 1)]
+      \end{lstlisting}
+  \end{itemize}
+\end{frame}
+
+\end{document}
