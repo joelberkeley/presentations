@@ -1,3 +1,14 @@
+######################################################
+#
+# Custom ignores
+
+# Compiled presentations
+presentation.pdf
+
+######################################################
+#
+# GitHub default TeX ignores
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
