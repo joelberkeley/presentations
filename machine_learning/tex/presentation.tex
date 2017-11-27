@@ -1,0 +1,173 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+
+\usetheme{metropolis}
+
+\usepackage{graphicx}
+\usepackage{listings}
+
+\author{Joel Berkeley}
+\title{Machine learning}
+\institute{Verimatrix Bristol}
+\date{December 2017}
+
+\setbeamercolor*{structure}{
+  bg=OliveGreen!20,
+  fg=OliveGreen
+}
+\setbeamercolor*{palette primary}{
+  use=structure,
+  fg=OliveGreen,
+  bg=structure.fg
+}
+\setbeamercolor{section in toc}{
+  fg=black,
+  bg=white
+}
+\setbeamercolor{alerted text}{
+  use=structure,
+  fg=structure.fg!50!black!80!black
+}
+\setbeamercolor{titlelike}{
+  parent=palette primary,
+  fg=structure.fg!50!black
+}
+\setbeamercolor{frametitle}{
+  bg=gray!10!white,
+  fg=OliveGreen
+}
+\setbeamercolor*{titlelike}{
+  parent=palette primary
+}
+
+%
+%
+% Document-specific preamble
+%
+%
+
+\newtheorem{nofreelunch}{No Free Lunch Theorem}
+
+%
+%
+% The document
+%
+%
+
+\begin{document}
+
+\begin{frame}
+  \maketitle
+\end{frame}
+
+\begin{frame}
+  \frametitle{Overview}
+  \begin{itemize}
+    \item<+-> Why machine learning?
+    \item<+-> History
+    \item<+-> Foundations \& literature
+    \item<+-> Task, performance, experience
+    \item<+-> Models
+    \item<+-> Deep learning
+    \item<+-> Tools \& technologies
+    \item<+-> Applications
+    \item<+-> AI
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Why machine learning?}
+\end{frame}
+
+\begin{frame}
+  \frametitle{History}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Foundations \& literature}
+  \begin{itemize}
+    \item Probability theory
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Task, performance, experience}
+  \begin{itemize}
+    \item<+-> Task
+    \item<+-> Performance
+    \item<+-> Experience
+      \begin{itemize}
+        \item supervised learning
+        \item unsupervised learning
+        \item ???
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Models}
+  \uncover<+>{
+    \begin{itemize}
+      \item ???
+    \end{itemize}
+  }
+  \uncover<+>{
+    \begin{nofreelunch}
+      any two optimization algorithms are equivalent when their performance is averaged across all possible problems
+    \end{nofreelunch}
+    therefore \ldots
+      \begin{itemize}
+        \item<+-> no ideal universal model
+        \item<+-> optimize models for specific tasks
+      \end{itemize}
+  }
+\end{frame}
+
+\begin{frame}
+  \frametitle{Deep learning}
+  \begin{itemize}
+    \item<+-> Layers of representation learning
+    \item<+->
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tools \& technologies}
+  \begin{itemize}
+    \item Scikit-learn
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Applications}
+  \begin{itemize}
+    \item<+-> Natural langauge processing \& translation
+    \item<+-> Computer vision \ldots self-driving cars \& medical diagnosis
+    \item<+-> Music
+    \item<+-> Denoising
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{AI}
+  \begin{itemize}
+    \item Milestones
+    \item Artificial conciousness?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Summary}
+  \begin{itemize}
+    \item<+-> Why machine learning?
+    \item<+-> History
+    \item<+-> Foundations \& literature
+    \item<+-> Task, performance, experience
+    \item<+-> Models
+    \item<+-> Deep learning
+    \item<+-> Tools \& technologies
+    \item<+-> Applications
+    \item<+-> AI
+  \end{itemize}
+\end{frame}
+
+\end{document}
