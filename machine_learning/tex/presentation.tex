@@ -83,10 +83,24 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Foundations \& literature}
+  \frametitle{Theory prerequisites}
   \begin{itemize}
-    \item Probability theory
+    \item<+-> Graph theory
+    \item<+-> Numerical computation
+    \item<+-> Information theory
+    \item<+-> Probability theory
   \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Probability}
+  From \ldots\
+  \begin{itemize}
+    \item<+-> inherent stochasticity e.g. quantum mechanics, chaos
+    \item<+-> incomplete observability e.g. hidden variables
+    \item<+-> incomplete modelling e.g. discretising continuous data
+  \end{itemize}
+  Machine learning is essentially a specific application of probability theory
 \end{frame}
 
 \begin{frame}
@@ -107,33 +121,49 @@
   \frametitle{Models}
   \uncover<+>{
     \begin{itemize}
-      \item ???
+      \item<+-> logistic regression \ldots\ $f: \mathbb R^n \rightarrow \mathbb R $
+      \item<+-> $k$-nearest neighbours
+      \item<+-> $k$-means clustering
+      \item<+-> SVM
+      \item<+-> Decision trees \& random forests
+      \item<+-> PCA
     \end{itemize}
   }
-  \uncover<+>{
+  \visible<+>{
     \begin{nofreelunch}
       any two optimization algorithms are equivalent when their performance is averaged across all possible problems
     \end{nofreelunch}
-    therefore \ldots
+    therefore \ldots\
       \begin{itemize}
-        \item<+-> no ideal universal model
-        \item<+-> optimize models for specific tasks
+        \item no ideal universal model
+        \item optimize models for specific tasks
       \end{itemize}
   }
 \end{frame}
 
+\section{Deep learning}
+
 \begin{frame}
-  \frametitle{Deep learning}
+  \frametitle{Usages}
   \begin{itemize}
-    \item<+-> Layers of representation learning
-    \item<+->
+    \item<+-> Learn the representation
+    \item<+-> Many layers
+    \item<+-> Hidden layers
   \end{itemize}
 \end{frame}
 
 \begin{frame}
   \frametitle{Tools \& technologies}
   \begin{itemize}
-    \item Scikit-learn
+    \item<+-> Python \ldots\ Scikit-learn
+    \item<+-> Deep learning
+      \begin{itemize}
+        \item TensorFlow
+        \item Caffe (computer vision)
+        \item MxNet
+        \item Torch (Lua)
+        \item DL4J (JVM)
+      \end{itemize}
   \end{itemize}
 \end{frame}
 
@@ -141,7 +171,7 @@
   \frametitle{Applications}
   \begin{itemize}
     \item<+-> Natural langauge processing \& translation
-    \item<+-> Computer vision \ldots self-driving cars \& medical diagnosis
+    \item<+-> Computer vision \ldots\ self-driving cars \& medical diagnosis
     \item<+-> Music
     \item<+-> Denoising
   \end{itemize}
@@ -158,15 +188,15 @@
 \begin{frame}
   \frametitle{Summary}
   \begin{itemize}
-    \item<+-> Why machine learning?
-    \item<+-> History
-    \item<+-> Foundations \& literature
-    \item<+-> Task, performance, experience
-    \item<+-> Models
-    \item<+-> Deep learning
-    \item<+-> Tools \& technologies
-    \item<+-> Applications
-    \item<+-> AI
+    \item Why machine learning?
+    \item History
+    \item Foundations \& literature
+    \item Task, performance, experience
+    \item Models
+    \item Deep learning
+    \item Tools \& technologies
+    \item Applications
+    \item AI
   \end{itemize}
 \end{frame}
 
