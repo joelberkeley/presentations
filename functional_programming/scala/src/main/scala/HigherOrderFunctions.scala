@@ -1,5 +1,3 @@
-import Recursion.factorial
-
 object HigherOrderFunctions {
   // from scala-exercises.org
   def sum(f: Int => Int, a: Int, b: Int): Int = {
@@ -10,4 +8,3 @@ object HigherOrderFunctions {
   def sumCubes(a, b) = sum(_**3, a, b)
   def sumQuartic(a, b) = sum(_**4, a, b)
 }
-

@@ -5,4 +5,3 @@ class FirstClassFunctions {
   List(1, 2, 3, 4, 5).filter(oddsGreaterThan2)
   // returns List(3, 5)
 }
-
