@@ -4,7 +4,7 @@ TeX source for [Beamer](https://www.sharelatex.com/learn/Beamer) presentations o
 
 Note: In the following, a _presentation directory_ is **not** the repository root itself, but any directory containing the TeX and other source code for a given presentation. Presentation directories are all located in the repository root.
 
-## Including source code with the listings package
+## Including software source code
 
 Most presentations here include extracts of source code in various programming languages. The LaTeX [Listings package](http://texdoc.net/texmf-dist/doc/latex/listings/listings.pdf) allows us to achieve this easily and beautifully (we think). Code extracts are usually imported directly from dedicated source packages in the presentation directory (though some is inline in the TeX source). This allows us to write the source code as a working program. You can see an example of this in the presentation directory 'functional_programming'.
 
