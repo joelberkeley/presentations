@@ -62,17 +62,15 @@
 \begin{frame}
   \frametitle{Overview}
   \begin{itemize}
-    \item<+-> Why machine learning?
-    \item<+-> History
-    \item<+-> Foundations \& literature
-    \item<+-> Task, performance, experience
+    \item<+-> The context
+    \item<+-> Theoretical foundations
     \item<+-> Models
     \item<+-> Deep learning
-    \item<+-> Tools \& technologies
     \item<+-> Applications
-    \item<+-> AI
   \end{itemize}
 \end{frame}
+
+\section{The context}
 
 \begin{frame}
   \frametitle{Why machine learning?}
@@ -81,6 +79,8 @@
 \begin{frame}
   \frametitle{History}
 \end{frame}
+
+\section{Theoretical foundations}
 
 \begin{frame}
   \frametitle{Theory prerequisites}
@@ -100,7 +100,9 @@
     \item<+-> incomplete observability e.g. hidden variables
     \item<+-> incomplete modelling e.g. discretising continuous data
   \end{itemize}
-  Machine learning is essentially a specific application of probability theory
+  \uncover<+->{
+    Machine learning is essentially a specific application of probability theory
+  }
 \end{frame}
 
 \begin{frame}
@@ -112,39 +114,42 @@
       \begin{itemize}
         \item supervised learning
         \item unsupervised learning
-        \item ???
+        \item others e.g. reinforcement learning
       \end{itemize}
   \end{itemize}
 \end{frame}
 
+\section{Models}
+
 \begin{frame}
-  \frametitle{Models}
-  \uncover<+>{
-    \begin{itemize}
-      \item<+-> logistic regression \ldots\ $f: \mathbb R^n \rightarrow \mathbb R $
-      \item<+-> $k$-nearest neighbours
-      \item<+-> $k$-means clustering
-      \item<+-> SVM
-      \item<+-> Decision trees \& random forests
-      \item<+-> PCA
-    \end{itemize}
-  }
-  \visible<+>{
-    \begin{nofreelunch}
-      any two optimization algorithms are equivalent when their performance is averaged across all possible problems
-    \end{nofreelunch}
-    therefore \ldots\
-      \begin{itemize}
-        \item no ideal universal model
-        \item optimize models for specific tasks
-      \end{itemize}
-  }
+  \frametitle{Examples}
+  \begin{itemize}
+    \item<+-> logistic regression
+      \only<+>{ line 1
+        line2}
+    \item<+-> $k$-nearest neighbours
+    \item<+-> $k$-means clustering
+    \item<+-> SVM
+    \item<+-> Decision trees \& random forests
+    \item<+-> PCA
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{No perfect model}
+  \begin{nofreelunch}
+    algorithms are equivalent when averaged across all possible tasks
+  \end{nofreelunch}
+  \begin{itemize}
+    \item no perfect universal model
+    \item optimize models for specific tasks
+  \end{itemize}
 \end{frame}
 
 \section{Deep learning}
 
 \begin{frame}
-  \frametitle{Usages}
+  \frametitle{Architecture}
   \begin{itemize}
     \item<+-> Learn the representation
     \item<+-> Many layers
@@ -152,23 +157,26 @@
   \end{itemize}
 \end{frame}
 
+\section{Application}
+
 \begin{frame}
-  \frametitle{Tools \& technologies}
+  \frametitle{Technologies}
   \begin{itemize}
-    \item<+-> Python \ldots\ Scikit-learn
+    \item<+-> Python's scikit-learn
+    \item<+-> Spark MLlib
+    \item<+-> PredictionIO
     \item<+-> Deep learning
       \begin{itemize}
-        \item TensorFlow
-        \item Caffe (computer vision)
-        \item MxNet
-        \item Torch (Lua)
-        \item DL4J (JVM)
+        \item TensorFlow (Google), Caffe2, Torch (Facebook, Lua), CNTK (Microsoft), BigDL (Intel, JVM), MxNet, Theano (ends 2017)
+        \item Keras (powerful API)
       \end{itemize}
+    \item<+-> mostly open source
+    \item<+-> GPU \& IPU
   \end{itemize}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Applications}
+  \frametitle{Current}
   \begin{itemize}
     \item<+-> Natural langauge processing \& translation
     \item<+-> Computer vision \ldots\ self-driving cars \& medical diagnosis
@@ -185,18 +193,16 @@
   \end{itemize}
 \end{frame}
 
+\section{Summary}
+
 \begin{frame}
   \frametitle{Summary}
   \begin{itemize}
-    \item Why machine learning?
-    \item History
-    \item Foundations \& literature
-    \item Task, performance, experience
-    \item Models
-    \item Deep learning
-    \item Tools \& technologies
-    \item Applications
-    \item AI
+    \item<+-> The context
+    \item<+-> Theoretical foundations
+    \item<+-> Models
+    \item<+-> Deep learning
+    \item<+-> Applications
   \end{itemize}
 \end{frame}
 
