@@ -2,7 +2,7 @@
 
 TeX source for [Beamer](https://www.sharelatex.com/learn/Beamer) presentations on various topics. Often accompanied by source code in various programming languages. Presentations typically use the [Metropolis theme](https://github.com/matze/mtheme).
 
-Note: In the following, by _presentation directory_ we do **not** mean the repository root itself, but the directory containing the TeX and other source code for a given presentation. Presentation directories are all located in the repository root.
+Note: In the following, a _presentation directory_ is **not** the repository root itself, but any directory containing the TeX and other source code for a given presentation. Presentation directories are all located in the repository root.
 
 ## Including source code with the listings package
 
