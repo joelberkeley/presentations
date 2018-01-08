@@ -1,4 +1,4 @@
-class FirstClassFunctions {
+object FirstClassFunctions {
   val oddsGreaterThan2 = (x: Int) => {
     x > 2 && x % 2 == 1
   }

@@ -1,4 +1,4 @@
-class PatternMatching {
+object PatternMatching {
 
   case class Animal(legs: Int, colour: String)
 

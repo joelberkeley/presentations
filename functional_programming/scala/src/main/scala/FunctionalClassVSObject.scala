@@ -1,8 +1,8 @@
-class FunctionalClassVSObject {
+object FunctionalClassVSObject {
   def expensiveFunctionalOperation() = 1
- 
+
   class A {
-    private var buf: Int = 0 
+    private var buf: Int = 0
 
     def getVal: Int = {
       // non-functional implementation
