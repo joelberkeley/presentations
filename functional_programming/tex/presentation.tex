@@ -7,8 +7,8 @@
 
 \author{Joel Berkeley}
 \title{Functional Programming}
-\institute{Verimatrix Bristol}
-\date{October 2017}
+%\institute{}
+\date{}
 
 \setbeamercolor*{structure}{
   bg=OliveGreen!20,
@@ -54,139 +54,124 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{(Some) programming paradigms}
+  \frametitle{Paradigms}
   \begin{itemize}
-    \item<1-> \textbf{Imperative} \ldots statements directly change current state
-    \item<2-> \textbf{Procedural} \ldots functions as subroutines
-    \item<3-> \textbf{Object-oriented} \ldots data as objects with predefined methods
-    \item<4-> \textbf{Automata-based} \ldots e.g. FSM
-    \item<5-> \textbf{Functional} \ldots computation through evaluation of mathematical functions
+    \item<1-> \textbf{imperative} \ldots\ directly mutate current state
+    \item<2-> \textbf{procedural} \ldots\ subroutines
+    \item<3-> \textbf{functional} \ldots\ separate definition \& execution
   \end{itemize}
 \end{frame}
 
-\section{Functional programming}
-
-\begin{frame}
-  \frametitle{Overview}
-  \begin{itemize}
-  	\item<1-> pure functions (in mathematical sense)
-  	\begin{itemize}
-  	  \item<2-> referential transparency
-     	\item<2-> pattern matching
-      \item<2-> recursion
-  	\end{itemize}
-  	\item<3-> first-class functions
-    \item<4-> higher-order functions
-    \item<5-> can be object-oriented
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Languages}
-  \begin{itemize}
-    \item Haskell
-    \item Scala
-    \item Clojure
-    \item Elixir
-    \item R
-    \item \ldots others
-  \end{itemize}
-\end{frame}
-
-\section{And in greater detail \ldots}
-
-\begin{frame}
-  \frametitle{Pure functions}
-  Aspects \ldots
-  \begin{itemize}
-    \item<2-> referentially transparent \lstinputlisting[firstline=2, lastline=3, showstringspaces=false]{scala/src/main/scala/ReferentialTransparency.scala}
-    \item<3-> explicit \& controlled \ldots
-      \begin{itemize}
-        \item side effects
-        \item access to external state (e.g. random numbers, time)
-        \item I/O
-      \end{itemize}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Pure functions}
-  Consequences \ldots
-  \begin{itemize}
-    \item<2-> easier to
-      \begin{itemize}
-        \item follow code
-        \item unit test
-        \item refactor
-      \end{itemize}
-    \item<3-> thread-safe
-    \item<4-> state must be handled differently, e.g.
-      \begin{itemize}
-        \item monads
-        \item state-passing
-      \end{itemize}
-  \end{itemize}
-\end{frame}
+\section{FP overview}
 
 \begin{frame}[fragile]
-  \frametitle{Recursion}
-  \uncover<2->{
-    Without recursion \ldots
-    \lstinputlisting[firstline=2, lastline=6, showstringspaces=false]{scala/src/main/scala/NonRecursive.scala}
+  \frametitle{Intention}
+  \only<1> {
+    separate definition and execution \ldots\
   }
-  \uncover<3>{
-    With recursion \ldots
-    \lstinputlisting[firstline=2, lastline=5, showstringspaces=false]{scala/src/main/scala/Recursion.scala}
+  \only<2-> {
+    \begin{itemize}
+      \item<2-> referential transparency \ldots\ expression $\leftrightarrow$ result \lstinputlisting[firstline=5, lastline=7, showstringspaces=false]{scala/src/main/scala/ReferentialTransparency.scala}
+      \item<3-> manage side effects
+        \begin{itemize}
+          \item mutation
+          \item errors
+          \item I/O, external state (random numbers, time, \ldots)
+        \end{itemize}
+      \item<4-> employ category theory
+    \end{itemize}
   }
+\end{frame}
+
+\begin{frame}
+  \frametitle{Consequences (vs Imperative)}
+  \begin{itemize}
+    \item<1-> composable $\therefore$ easier to
+      \begin{itemize}
+        \item follow code
+        \item test
+        \item refactor
+      \end{itemize}
+    \item<2-> thread-safe
+    \item<3-> can impact performance
+    \item<4-> handle state differently \ldots\ how?
+  \end{itemize}
+\end{frame}
+
+\section{FP examples}
+
+\begin{frame}[fragile]
+  \frametitle{Handling state - recursion}
+  \only<1> {
+    \lstinputlisting[firstline=3, lastline=8, showstringspaces=false]{scala/src/main/scala/Recursion.scala}
+  }
+  \only<2> {
+    \lstinputlisting[firstline=12, lastline=19, showstringspaces=false]{scala/src/main/scala/Recursion.scala}
+  }
+\end{frame}
+
+\begin{frame}
+  \frametitle{Handling state - errors}
+  \textit{Return} error with result
+  \lstinputlisting[firstline=4, lastline=9, showstringspaces=false]{scala/src/main/scala/Errors.scala}
+\end{frame}
+
+\section{FP constructs}
+
+\begin{frame}
+  \frametitle{Data structures}
+  Immutable/persistent ADTs e.g.
+  \lstinputlisting[firstline=5, lastline=8, showstringspaces=false]{scala/src/main/scala/ADT.scala}
 \end{frame}
 
 \begin{frame}
   \frametitle{Pattern matching}
-  \lstinputlisting[firstline=2, lastline=11, showstringspaces=false]{scala/src/main/scala/PatternMatching.scala}
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{First class functions}
-  Pass around functions like variables
-  \lstinputlisting[firstline=2, lastline=6]{scala/src/main/scala/FirstClassFunctions.scala}
-  notice that, ‘=’ is \textit{after} the function value declaration, unlike for a function.
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{Higher order functions}
-  Take functions as arguments, or return functions e.g.
-  \lstinputlisting[firstline=2, lastline=9]{scala/src/main/scala/HigherOrderFunctions.scala}
+  Traverse ADTs
+  \lstinputlisting[firstline=10, lastline=13, showstringspaces=false]{scala/src/main/scala/ADT.scala}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Functional OOP}
-  \begin{itemize}
-    \item immutable objects
-    \item methods return new objects
-  \end{itemize}
+  \frametitle{First class \& higher order functions}
+  \lstinputlisting[firstline=2, lastline=11]{scala/src/main/scala/FirstClassHOFunctions.scala}
 \end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{Functional objects vs. functional classes}
-  \lstinputlisting[firstline=4, lastline=15]{scala/src/main/scala/FunctionalClassVSObject.scala}
-\end{frame}
-
-\section{Summary}
 
 \begin{frame}
-  \frametitle{Summary}
-  Functional programming uses \ldots
+  \frametitle{Performance}
+  FP interface, imperative implementation
+  \lstinputlisting[firstline=2, lastline=9, showstringspaces=false]{scala/src/main/scala/Recursion.scala}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Laziness}
   \begin{itemize}
-  	\item<1-> pure functions
-  	\begin{itemize}
-  	  \item<2-> referential transparency
-     	\item<2-> pattern matching
-      \item<2-> recursion
-  	\end{itemize}
-  	\item<3-> first-class functions
-    \item<4-> higher-order functions
-    \item<5-> can be object-oriented
+    \item<1-> separate definition \& execution \ldots\ of values
+    \item<2-> evaluate when needed
+    \item<3-> allowed by RT \ldots\ order of evaluation not important
+    \item<4-> producer \& consumer
+    \item<5-> improves modularity \& performance
   \end{itemize}
+\end{frame}
+
+\section{FP languages}
+
+\begin{frame}[fragile]
+  \frametitle{FP languages}
+  \begin{itemize}
+    \item \textbf{historical} \ldots\ IPL, APL, FP, NPL, K, Q, ML/dialects, Lisp/dialects
+    \item \textbf{research} \ldots\ Miranda, Haskell, Julia
+    \item \textbf{commercial} \ldots\ R, Clojure, Scala, F$^\sharp$, Elixir, Elm
+    \item \textbf{FP-influenced} \ldots\ many
+  \end{itemize}
+\end{frame}
+
+\section{Take-homes}
+
+\begin{frame}
+  Separate definition \& execution ...
+  
+  \hfill ... by passing state etc.
+  
+  \center{\ldots\ and get composability, testability and safety}
 \end{frame}
 
 \end{document}
